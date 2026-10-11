@@ -1,0 +1,21 @@
+[project]
+name = "biomedical-quality"
+version = "0.1.0"
+description = "Data quality reporting for biomedical datasets"
+requires-python = ">=3.14"
+dependencies = [
+    "pandas",
+    "scikit-learn",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
