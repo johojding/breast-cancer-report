@@ -1,5 +1,5 @@
 from sklearn.datasets import load_breast_cancer
-from biomedical_quality import quality_report
+from biomedical_quality import quality_report, class_balance_report
 
 dataset = load_breast_cancer(as_frame=True)
 
@@ -33,3 +33,5 @@ print(dataset.DESCR[:3000])
 quality_report_df, nr_duplicates = quality_report(df)
 print(quality_report_df)
 print(f"Number of duplicate rows: {nr_duplicates}")
+
+target_df = class_balance_report(target, dataset.target_names)

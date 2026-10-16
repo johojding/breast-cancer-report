@@ -31,3 +31,13 @@ def quality_report(df: pd.DataFrame) -> tuple[pd.DataFrame, int]:
 
     nr_duplicates = df.duplicated().sum()
     return report_df, nr_duplicates
+
+def class_balance_report(targets: pd.Series, target_names: List) -> pd.DataFrame:
+
+    col_names = ["count", "percentage"]
+    target_df = pd.DataFrame(
+        columns=col_names,
+        index=target_names,
+    )
+    print(target_df)
+    return None
