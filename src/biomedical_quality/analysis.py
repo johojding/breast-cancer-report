@@ -1,4 +1,5 @@
 from sklearn.datasets import load_breast_cancer
+from biomedical_quality import quality_report
 
 dataset = load_breast_cancer(as_frame=True)
 
