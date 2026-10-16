@@ -1,5 +1,6 @@
 import pandas as pd
 import pytest
+import numpy as np
 
 @pytest.fixture
 def clean_df():
@@ -25,3 +26,11 @@ def duplicated_df():
 @pytest.fixture
 def empty_df():
     return pd.DataFrame()
+
+@pytest.fixture
+def clean_series():
+    return pd.Series([0,0,1,0,2,1])
+
+@pytest.fixture
+def clean_labels():
+    return np.array(["small", "medium", "large"])

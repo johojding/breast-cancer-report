@@ -1,4 +1,4 @@
-from biomedical_quality import quality_report
+from biomedical_quality import quality_report, class_balance_report
 from pytest import raises
 
 def test_clean_data_has_no_missing_values(clean_df):
@@ -28,3 +28,7 @@ def test_empty_data(empty_df):
 def test_wrong_input_type():
     with raises(TypeError):
         quality_report(None)
+
+def test_clean_series_and_labels(clean_series, clean_labels):
+    report = class_balance_report(clean_series, clean_labels)
+    assert report["count"].sum() == 6
