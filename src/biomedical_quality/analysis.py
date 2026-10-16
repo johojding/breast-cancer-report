@@ -29,3 +29,7 @@ print(target.value_counts())
 
 print("\nDataset description:")
 print(dataset.DESCR[:3000])
+
+quality_report_df, nr_duplicates = quality_report(df)
+print(quality_report_df)
+print(f"Number of duplicate rows: {nr_duplicates}")
