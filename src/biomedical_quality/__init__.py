@@ -1,1 +1,1 @@
-from .report import quality_report
+from .report import quality_report, class_balance_report
