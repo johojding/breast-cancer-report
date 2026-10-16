@@ -26,5 +26,5 @@ print(target.head())
 print("\nTarget class counts:")
 print(target.value_counts())
 
-print("\nDataset description")
+print("\nDataset description:")
 print(dataset.DESCR[:3000])
