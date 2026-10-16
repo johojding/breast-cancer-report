@@ -34,4 +34,6 @@ quality_report_df, nr_duplicates = quality_report(df)
 print(quality_report_df)
 print(f"Number of duplicate rows: {nr_duplicates}")
 
+
 target_df = class_balance_report(target, dataset.target_names)
+print(target_df)
