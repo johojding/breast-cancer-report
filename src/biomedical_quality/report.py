@@ -29,6 +29,7 @@ def quality_report(df: pd.DataFrame) -> tuple[pd.DataFrame, int]:
     report_df["75_percentile"] = df.quantile(0.75, numeric_only=True)      # 75th percentile
 
     nr_duplicates = df.duplicated().sum()
+    report_df.to_csv("reports/quality_report.csv", index_label="feature")
     return report_df, nr_duplicates
 
 def class_balance_report(targets: pd.Series, target_names: list[str] | np.ndarray) -> pd.DataFrame:
